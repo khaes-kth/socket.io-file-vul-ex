@@ -64,7 +64,7 @@ pip install socketIO-client-nexus==0.7.6
 
 ## Screencast Demo
 
-You can download the screencast demo [here](https://github.com/khaes-kth/socket.io-file-vul-ex/blob/main/demo.webm).
+You can download the screencast demo [here](https://github.com/khaes-kth/socket.io-file-vul-ex/raw/refs/heads/main/demo.webm).
 
 ## References
 - [Socket.io-file 2.0.31 - Arbitrary File Upload](https://www.exploit-db.com/exploits/48713)
