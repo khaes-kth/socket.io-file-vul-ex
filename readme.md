@@ -36,7 +36,7 @@ The website also has a nice gallery of its soldiers served as static files in th
 
 When using `Socket.io-file` to upload a file, you can also set the name of the file you are uploading. This makes a lot of sense. The big issue is that instead of passing the file name, you pass a path! If you do so, the file will be saved in the path you have mentioned.
 
-By default, the uploaded files are supposed to be saved in the `cv-applicants` directory. However, if you pass a name like `../public/filename.html`, it will be saved in the `public` directory. Note that files in this directory are served as static files. What if a malicious actor upploads a WAR ANNOUNCEMENT to that directory? Let's see what happes below.
+By default, the uploaded files are supposed to be saved in the `cv-applicants` directory (see [this line](https://github.com/khaes-kth/socket.io-file-vul-ex/blob/main/vulnerable-component/server.js#L32)). However, if you pass a name like `../public/filename.html`, it will be saved in the `public` directory. Note that files in this directory are served as static files. What if a malicious actor upploads a WAR ANNOUNCEMENT to that directory? Let's see what happes below.
 
 ### Potential Fix for the Exploit
 
@@ -61,6 +61,10 @@ python -m venv .venv
 source .venv/bin/activate
 pip install socketIO-client-nexus==0.7.6
 ```
+
+## Screencast Demo
+
+You can download the screencast demo [here](https://github.com/khaes-kth/socket.io-file-vul-ex/blob/main/demo.webm).
 
 ## References
 - [Socket.io-file 2.0.31 - Arbitrary File Upload](https://www.exploit-db.com/exploits/48713)
