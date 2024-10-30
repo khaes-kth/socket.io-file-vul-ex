@@ -2,6 +2,10 @@ var socket = io('http://localhost:3000');
 var uploader = new SocketIOFileClient(socket);
 var form = document.getElementById('form');
 
+const fs = require('fs');
+
+fs.appendFileSync('index.html', 'data to append');
+
 uploader.on('ready', function() {
 	console.log('SocketIOFile ready to go!');
 });
